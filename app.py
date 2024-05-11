@@ -19,7 +19,7 @@ GA = st.number_input("Gestational Age (weeks)", min_value=0.0, value=40.0, step=
 creatinine = st.number_input("Creatinine (mg/dL)", min_value=0.0, value=1.9, step=0.1)
 creatinine_unit = st.radio("Creatinine Unit", ("mg/dL", "µmol/L"))
 PNA = st.number_input("Postnatal Age (days)", min_value=0, value=3, step=1)
-BW = st.number_input("Body Weight (grams)", min_value=0, value=1800, step=10)
+BW = st.number_input("Birth Weight (grams)", min_value=0, value=1800, step=10)
 
 if creatinine_unit == 'µmol/L':
     creatinine /= 88.4  # Convert from µmol/L to mg/dL
@@ -41,9 +41,9 @@ input_df = pd.DataFrame({
 
 # Descriptive labels and graph labels
 labels = [
-    "This infant may require therapeutic hypothermia for the best possible outcome and is likely to survive it without issue.",
+    "This infant may require therapeutic hypothermia for the best possible outcome and is likely to survive it without AKI.",
     "If therapeutic hypothermia is induced upon this infant, survival of the infant is likely, although there is risk of acute kidney injury developing.",
-    "Fatality may result during therapeutic hypothermia treatment of this infant.",
+    "There is a risk of death as a result of therapeutic hypothermia treatment, however AKI is unlikely.",
     "There is a risk of acute kidney injury as well as death while this infant undergoes therapeutic hypothermia treatment.",
     "This patient seems to be stable and therapeutic hypothermia may not be necessary at all."
 ]
