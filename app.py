@@ -49,10 +49,10 @@ labels = [
 ]
 
 graph_label = [
-    'TH-treated NE neonate surviving without AKI',
-    'TH-treated NE neonate surviving with AKI',
-    'TH-treated NE neonate dies without AKI',
-    'TH-treated NE neonate dies with AKI',
+    "TH-treated NE neonates who survived without AKI",
+    "TH-treated NE neonates who survived and had AKI",
+    "TH-treated NE neonates who died without AKI",
+    "TH-treated NE neonates who died and had AKI",
     'Hospitalized (Control neonate, non-NE)'
 ]
 
