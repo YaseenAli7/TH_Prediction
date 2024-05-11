@@ -39,7 +39,7 @@ input_df = pd.DataFrame({
     'PNA_Creatinine_interaction': [PNA_Creatinine_interaction]
 })
 
-# Descriptive labels and graph labels
+# Descriptive labels for prediction outcomes
 labels = [
     "This infant may require therapeutic hypothermia for the best possible outcome and is likely to survive it without AKI.",
     "If therapeutic hypothermia is induced upon this infant, survival of the infant is likely, although there is risk of acute kidney injury developing.",
@@ -48,12 +48,13 @@ labels = [
     "This patient seems to be stable and therapeutic hypothermia may not be necessary at all."
 ]
 
+# Labels for the graph
 graph_label = [
     "TH-treated NE neonates who survived without AKI",
     "TH-treated NE neonates who survived and had AKI",
     "TH-treated NE neonates who died without AKI",
     "TH-treated NE neonates who died and had AKI",
-    'Hospitalized (Control neonate, non-NE)'
+    "Hospitalized (Control neonate, non-NE)"
 ]
 
 if st.button("Predict"):
@@ -76,16 +77,26 @@ if st.button("Predict"):
     st.text(f"95% Confidence Interval for Outcome: ({ci_lower:.2f}, {ci_upper:.2f})")
     st.text(f"Odds of Death given AKI: {odds_death_given_AKI:.2f}")
 
-    # Confidence chart without legend
+    # Confidence chart with adjusted axis font sizes
     fig = px.bar(
         x=graph_label,
         y=prediction_proba,
         title="Prediction Confidence Levels",
         labels={'x': 'Outcome', 'y': 'Probability'},
-        xaxis=dict(title_font=dict(size=16), tickfont=dict(size=14)),
-        yaxis=dict(title_font=dict(size=16), tickfont=dict(size=14)),
         color=graph_label,
         color_discrete_sequence=px.colors.qualitative.Plotly
     )
-    fig.update_layout(showlegend=False, height=700, width=750, yaxis=dict(range=[0, 1]))
+    fig.update_layout(
+        showlegend=False,
+        xaxis_title="Outcomes",
+        yaxis_title="Probability",
+        xaxis=dict(title_font=dict(size=26), tickfont=dict(size=20)),
+        yaxis=dict(
+            title_font=dict(size=26), 
+            tickfont=dict(size=20),
+            range=[0, 1]  # Setting the range from 0 to 1 for the probability axis
+        ),
+        height=800,
+        width=850
+    )
     st.plotly_chart(fig)
