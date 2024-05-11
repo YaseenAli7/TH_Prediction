@@ -15,7 +15,7 @@ bootstrap_predictions_df = pd.read_csv('bootstrap_predictions.csv')
 st.title("Therapeutic Hypothermia Outcome Prediction")
 
 # Input fields
-GA = st.number_input("Gestation Age (weeks)", min_value=0.0, value=40.0, step=1.0)
+GA = st.number_input("Gestational Age (weeks)", min_value=0.0, value=40.0, step=1.0)
 creatinine = st.number_input("Creatinine (mg/dL)", min_value=0.0, value=1.9, step=0.1)
 creatinine_unit = st.radio("Creatinine Unit", ("mg/dL", "µmol/L"))
 PNA = st.number_input("Postnatal Age (days)", min_value=0, value=3, step=1)
