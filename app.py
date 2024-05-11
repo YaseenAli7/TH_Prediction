@@ -82,6 +82,8 @@ if st.button("Predict"):
         y=prediction_proba,
         title="Prediction Confidence Levels",
         labels={'x': 'Outcome', 'y': 'Probability'},
+        xaxis=dict(title_font=dict(size=16), tickfont=dict(size=14)),
+        yaxis=dict(title_font=dict(size=16), tickfont=dict(size=14)),
         color=graph_label,
         color_discrete_sequence=px.colors.qualitative.Plotly
     )
