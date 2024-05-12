@@ -49,7 +49,7 @@ labels = [
 
 "There is a risk of acute kidney injury as well as death if this neonate with Neonatal encephalopathy undergoes therapeutic hypothermia treatment.",
 
-"This infant is hospitalized in Nicu non Neonatal encephalopathy reasons and therapeutic hypothermia may not be necessary at all."
+"This infant is hospitalized in Nicu for non Neonatal encephalopathy reasons and therapeutic hypothermia may not be necessary at all."
 ]
 
 # Labels for the graph
