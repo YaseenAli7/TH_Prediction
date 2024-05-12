@@ -41,11 +41,11 @@ input_df = pd.DataFrame({
 
 # Descriptive labels for prediction outcomes
 labels = [
-"This neonate with Neonatal encephalopathy may require therapeutic hypothermia for the best possible outcome and is likely to survive it without AKI."
+"This neonate with Neonatal encephalopathy may require therapeutic hypothermia for the best possible outcome and is likely to survive it without AKI.",
     
-“If therapeutic hypothermia is induced upon this neonate with Neonatal Encephalopathy, survival of the neonate is likely, although there is risk of acute kidney injury developing.",
+"If therapeutic hypothermia is induced upon this neonate with Neonatal Encephalopathy, survival of the neonate is likely, although there is risk of acute kidney injury developing.",
 
-"There is a risk of death for this neonate with neonatal encephalopathy during therapeutic hypothermia treatment, however AKI is unlikely"
+"There is a risk of death for this neonate with neonatal encephalopathy during therapeutic hypothermia treatment, however AKI is unlikely",
 
 "There is a risk of acute kidney injury as well as death if this neonate with Neonatal encephalopathy undergoes therapeutic hypothermia treatment.",
 
